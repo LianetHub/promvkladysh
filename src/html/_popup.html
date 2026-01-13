@@ -1,0 +1,31 @@
+<div id="modal" class="popup">
+    <div class="popup__content">
+        <form action="#" class="popup__body popup__form">
+            <button type="button" class="popup__close icon-close"></button>
+            <div class="popup__form-title">Заказать</div>
+            <div class="popup__form-subtitle">Оставьте ваши данные, мы свяжемся</div>
+            <div class="popup__form-rows">
+                <div class="popup__form-row">
+                    <input type="text" name="name" data-required class="form__input form__input-gray" placeholder="Имя" />
+                </div>
+                <div class="popup__form-row">
+                    <input type="email" name="email" data-required class="form__input form__input-gray" placeholder="E-mail" />
+                </div>
+                <div class="popup__form-row">
+                    <input type="tel" name="phone" data-required class="form__input form__input-gray" placeholder="Телефон" />
+                </div>
+                <div class="popup__form-row">
+                    <button type="submit" class="btn btn-mw btn-yellow">Заказать</button>
+                </div>
+                <div class="popup__form-row">
+                    <label class="form__privacy green">
+                        <input type="checkbox" checked data-required name="privacy" class="form__privacy-input hidden" hidden>
+                        <span class="form__privacy-content">
+                            Я даю согласие на обработку <a href="/privacy.html" class="form__privacy-link">персональных данных</a>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

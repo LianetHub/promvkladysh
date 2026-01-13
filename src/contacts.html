@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Промвкладыш | Контакты' })
+
+    <body data-ym-id="92253201">
+        <div class="wrapper">
+            @@include('html/_header.html', { "active": 6 })
+            <main class="page">
+                <div class="breadcrumbs">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__items">
+                            <li class="breadcrumbs__item">
+                                <a href="/" class="breadcrumbs__link">Главная</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link active"> Контакты </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <section class="contacts contacts-lg">
+                    <div class="contacts__container">
+                        <h1 class="contacts__title title title-xl">Контакты</h1>
+                        <div class="contacts__body">
+                            <ul class="contacts__list" itemscope itemtype="http://schema.org/Organization">
+                                <li class="contacts__item">
+                                    <div class="contacts__item-header icon-globe">Адрес:</div>
+                                    <div class="contacts__item-value">
+                                        <span itemprop="name">ООО «ГК Полиштамп»</span> <br />
+                                        <div itemscope itemtype="http://schema.org/PostalAddress">
+                                            <span class="contacts__item-caption"> Основной адрес:</span>
+                                            <span class="contacts__item-text" itemprop="address" itemscope>
+                                                <span itemprop="addressLocality">г.Казань</span>,
+                                                <span itemprop="streetAddress">ул. Дементьева 1</span>
+                                            </span>
+                                        </div>
+                                        <div itemscope itemtype="http://schema.org/PostalAddress">
+                                            <span class="contacts__item-caption">Филиал:</span>
+                                            <span class="contacts__item-text" itemprop="address" itemscope>
+                                                <span itemprop="addressLocality">г.Казань</span>,
+                                                <span itemprop="streetAddress">ул. Михаила Миля 18</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="contacts__item">
+                                    <div class="contacts__item-header icon-phone">Телефон:</div>
+                                    <a href="tel:89661933876" class="contacts__item-value" itemprop="telephone"> 8 966 193-38-76 </a>
+                                </li>
+                                <li class="contacts__item">
+                                    <div class="contacts__item-header icon-mail">Почта:</div>
+                                    <a href="mailto:5557097@mail.ru" class="contacts__item-value" itemprop="email" data-email>5557097@mail.ru </a>
+                                </li>
+                            </ul>
+                            <div id="map" class="contacts__map" data-placemark-src="@img/placemark.svg"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="feedback feedback-yellow feedback-lg" data-animate="bottom">
+                    <div class="feedback__container">
+                        <div class="feedback__body">
+                            <h2 class="feedback__title title title-md">Задать вопрос</h2>
+                            <form action="#" class="feedback__form form">
+                                <div class="form__grid">
+                                    <div class="form__grid-item">
+                                        <input type="text" name="name" data-required class="form__input" placeholder="Имя" />
+                                    </div>
+                                    <div class="form__grid-item">
+                                        <input type="tel" name="phone" data-required class="form__input" placeholder="Телефон" />
+                                    </div>
+                                    <div class="form__grid-item">
+                                        <input type="email" name="email" data-required class="form__input" placeholder="E-mail" />
+                                    </div>
+                                    <div class="form__grid-item form__grid-lg">
+                                        <textarea name="message" class="form__textarea" data-required placeholder="Сообщение"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form__footer">
+                                    <button type="submit" class="form__footer-btn btn btn-black btn-md">Отправить</button>
+                                    <div class="form__footer-privacy">Нажимая на кнопку, Вы даете согласие на обработку персональных данных</div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="feedback__image">
+                            <img src="@img/contacts/message.svg" data-animate="scale" alt="message icon" />
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_modal-form.html', {}) @@include('html/_js.html', {})
+    </body>
+</html>

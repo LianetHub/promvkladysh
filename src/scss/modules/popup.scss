@@ -1,0 +1,125 @@
+.popup {
+	position: fixed;
+	background: rgba($color: #232c32, $alpha: 0.7);
+	inset: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.3s linear 0s;
+	z-index: 55555;
+	&.open {
+		opacity: 1;
+		visibility: visible;
+		& .popup__body {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	// .popup__content
+	&__content {
+		min-height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2em em(8);
+	}
+	// .popup__body
+	&__body {
+		position: relative;
+		transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+		opacity: 0;
+		transform: translateY(-100%);
+		width: 100%;
+		max-width: 500px;
+		background: #fff;
+		padding: em(40);
+		border-radius: 4px;
+	}
+
+	// .popup__close
+	&__close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		transition: color 0.3s ease 0s;
+		z-index: 10;
+		font-weight: 800;
+		cursor: pointer;
+		z-index: 20;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #89939e;
+			}
+		}
+	}
+	&__form {
+		text-align: center;
+	}
+	// .popup__form-title
+	&__form-title {
+		font-family: Unbounded;
+		font-size: 30px;
+		line-height: math.div(39, 30);
+	}
+	// .popup__form-subtitle
+	&__form-subtitle {
+		margin: em(12) em(0) em(0) em(0);
+		font-weight: 500;
+		line-height: math.div(22, 16);
+	}
+	// .popup__form-rows
+	&__form-rows {
+		margin: em(24) em(0) em(0) em(0);
+	}
+	// .popup__form-row
+	&__form-row {
+		&:not(:last-child) {
+			margin: em(0) em(0) em(16) rem(0);
+		}
+	}
+	&__form-privacy {
+		font-size: 14px;
+		line-height: math.div(22, 14);
+	}
+}
+
+.popup-status {
+	background: #c2e23f;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__icon {
+		width: 72px;
+		height: 72px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		background-color: #232c32;
+		font-size: 24px;
+		border-radius: 50%;
+		margin: em(0) auto em(16) auto;
+	}
+	// .popup-status__title
+	&__title {
+	}
+	// .popup-status__text
+	&__text {
+		margin: em(8) em(0) em(0) em(0);
+		font-weight: 500;
+		line-height: math.div(22, 16);
+		& p {
+			&:not(:last-child) {
+				margin: em(0) em(0) em(8) rem(0);
+			}
+		}
+		& a {
+			margin: rem(15) em(0) em(0) em(0);
+			display: block;
+			font-size: 24px;
+			text-align: center;
+			font-weight: 700;
+		}
+	}
+}

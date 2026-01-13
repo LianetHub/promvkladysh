@@ -1,0 +1,80 @@
+<section class="geography">
+    <div class="geography__container">
+        <div class="geography__main">
+            <h2 class="geography__title title" data-animate="bottom">
+                География наших клиентов
+            </h2>
+            <div class="geography__map" data-animate="bottom">
+                @@include('_map.html', {})
+            </div>
+            <ul class="geography__places" data-animate="bottom">
+                <li class="geography__places-item">Вся Россия</li>
+                <li class="geography__places-item">Беларусь</li>
+                <li class="geography__places-item">Армения</li>
+                <li class="geography__places-item">Грузия</li>
+                <li class="geography__places-item">Азербайджан</li>
+                <li class="geography__places-item">Таджикистан</li>
+                <li class="geography__places-item">Узбекистан</li>
+                <li class="geography__places-item">Кыргызстан</li>
+                <li class="geography__places-item">Казахстан</li>
+            </ul>
+        </div>
+        <div class="geography__slider" data-animate="bottom">
+            <button type="button" class="geography-slider__prev swiper-button-prev btn btn-black btn-icon"></button>
+            <button type="button" class="geography-slider__next swiper-button-next btn btn-black btn-icon"></button>
+            <div class="geography-slider__content geography-slider swiper">
+                <div class="swiper-wrapper geography-slider__wrapper">
+
+                    <figure class="swiper-slide geography-slider__slide" data-tooltip="perm">
+                        <img src="@img/arms/perm.png" alt="Пермь">
+                        <figcaption>
+                            Пермь
+                        </figcaption>
+                    </figure>
+                    <figure class="swiper-slide geography-slider__slide" data-tooltip="omsk">
+                        <img src="@img/arms/omsk.png" alt="Омск">
+                        <figcaption>
+                            Омск
+                        </figcaption>
+                    </figure>
+                    <figure class="swiper-slide geography-slider__slide" data-tooltip="msk">
+                        <img src="@img/arms/moskva.png" alt="Москва">
+                        <figcaption>
+                            Москва
+                        </figcaption>
+                    </figure>
+                    <figure class="swiper-slide geography-slider__slide" data-tooltip="ulyanovsk">
+                        <img src="@img/arms/ulyanovsk.png" alt="Ульяновск">
+                        <figcaption>
+                            Ульяновск
+                        </figcaption>
+                    </figure>
+                    <figure class="swiper-slide geography-slider__slide" data-tooltip="spb">
+                        <img src="@img/arms/spb.png" alt="Санкт-Петебург">
+                        <figcaption>
+                            Санкт-Петебург
+                        </figcaption>
+                    </figure>
+                    <figure class="swiper-slide geography-slider__slide" data-tooltip="tomsk">
+                        <img src="@img/arms/tomsk.png" alt="Томск">
+                        <figcaption>
+                            Томск
+                        </figcaption>
+                    </figure>
+                    <figure class="swiper-slide geography-slider__slide" data-tooltip="voronezh">
+                        <img src="@img/arms/voronezh.png" alt="Воронеж">
+                        <figcaption>
+                            Воронеж
+                        </figcaption>
+                    </figure>
+                    <figure class="swiper-slide geography-slider__slide" data-tooltip="vologda">
+                        <img src="@img/arms/vologda.png" alt="Вологда">
+                        <figcaption>
+                            Вологда
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

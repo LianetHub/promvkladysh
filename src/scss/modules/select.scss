@@ -1,0 +1,76 @@
+.dropdown {
+	position: relative;
+
+	&__button {
+		position: relative;
+		cursor: pointer;
+		background: #ffffff;
+		border: 1px solid #fff;
+		transition: all 0.3s ease 0s;
+		color: #89939e;
+		width: 100%;
+		line-height: math.div(26, 16);
+		border-radius: 4px;
+		padding: em(15) em(19);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		z-index: 1;
+		&.selected {
+			color: #232c32;
+		}
+		&::before {
+			transition: transform 0.3s ease 0s;
+			@extend %ic, .icon-down;
+			order: 1;
+			color: #c2e23f;
+		}
+		&:not(.active) {
+			&:hover {
+				border: 1px solid #232c32;
+			}
+		}
+		&.active {
+			border-radius: 4px 4px 0 0;
+			&::before {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+	&__list {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 100%;
+		z-index: 4;
+		background: #ffffff;
+		border: 1px solid $green;
+		border-top: 0;
+		transition: 200ms ease;
+		opacity: 0;
+		visibility: hidden;
+		border-radius: 0 0 4px 4px;
+		overflow: hidden;
+		&.visible {
+			opacity: 1;
+			visibility: visible;
+		}
+		&-item {
+			padding: em(10, 10);
+			cursor: pointer;
+			transition: background-color 0.15s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					background: #232c32;
+					color: #fff;
+				}
+			}
+			&.active {
+				background: #232c32;
+				color: #fff;
+			}
+		}
+	}
+	&__input {
+	}
+}

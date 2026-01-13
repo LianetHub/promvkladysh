@@ -1,0 +1,145 @@
+.footer {
+	padding: em(24) em(0) em(24) em(0);
+	@media (min-width: $md4) {
+		padding: em(40) em(0) em(40) em(0);
+	}
+	@media (min-width: $md2) {
+		padding: em(61) em(0) em(81) em(0);
+	}
+	background: #232c32;
+	color: #fff;
+	// .footer__container
+	&__container {
+		@media (min-width: $md4) {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+	}
+	// .footer__main
+	&__main {
+		margin: em(0) em(0) em(24) rem(0);
+		@media (min-width: $md4) {
+			margin: em(0) em(20) em(0) em(0);
+		}
+	}
+	// .footer__logo
+	&__logo {
+	}
+	// .footer__address
+	&__address {
+		margin: em(12, 12) em(0) em(0) em(0);
+		font-size: 12px;
+		font-family: Unbounded;
+		@media (min-width: $md5) {
+			font-family: "Gilroy";
+			margin: em(11, 18) em(0) em(0) em(0);
+			font-size: 16px;
+		}
+		@media (min-width: $md3) {
+			font-size: 18px;
+		}
+		font-weight: 500;
+		line-height: math.div(29, 18);
+	}
+	&__copy {
+		margin: em(12, 12) em(0) em(0) em(0);
+		font-size: 10px;
+		font-family: Unbounded;
+		@media (min-width: $md5) {
+			font-family: "Gilroy";
+			margin: em(11, 18) em(0) em(0) em(0);
+			font-size: 14px;
+		}
+		color: rgba($color: #fff, $alpha: 0.5);
+		font-weight: 500;
+		line-height: math.div(29, 18);
+	}
+	&__privacy {
+		margin: em(11, 12) em(0) em(0) em(0);
+		font-size: 12px;
+		line-height: math.div(17, 12);
+		color: #c2e23f;
+		display: inline-block;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: darken($color: #c2e23f, $amount: 10);
+			}
+		}
+	}
+	// .footer__contacts
+	&__contacts {
+		@media (min-width: $md4) {
+			margin: em(0) em(0) em(0) auto;
+			display: flex;
+		}
+	}
+	// .footer__contacts-item
+	&__contacts-item {
+		&:not(:last-child) {
+			margin: em(0) em(0) em(16) rem(0);
+			@media (min-width: $md4) {
+				margin: em(0) em(40) em(0) em(0);
+			}
+			@media (min-width: $md2) {
+				margin: em(0) em(80) em(0) em(0);
+			}
+		}
+	}
+	// .footer__contacts-title
+	&__contacts-title {
+		color: #89939e;
+		line-height: math.div(26, 16);
+		font-size: 12px;
+		@media (min-width: $md5) {
+			font-size: 16px;
+		}
+	}
+	// .footer__contacts-phone
+	&__contacts-link {
+		margin: em(2, 18) em(0) em(0) em(0);
+		display: inline-block;
+		white-space: nowrap;
+		font-size: 12px;
+		font-family: Unbounded;
+		@media (min-width: $md5) {
+			font-family: "Gilroy";
+			font-size: 16px;
+		}
+		@media (min-width: $md3) {
+			font-size: 18px;
+		}
+
+		font-weight: 500;
+		line-height: math.div(29, 18);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $green;
+			}
+		}
+	}
+	// .footer__prod
+	&__prod {
+		margin: em(20) em(0) em(0) em(0);
+		@media (min-width: $md4) {
+			margin: em(0) em(0) em(0) em(40);
+		}
+		@media (min-width: $md2) {
+			margin: em(0) em(0) em(0) em(60);
+		}
+		font-size: 16px;
+		line-height: math.div(26, 16);
+		color: #89939e;
+	}
+	&__prod-link {
+		font-weight: 700;
+		white-space: nowrap;
+		color: #fff;
+		&::after {
+			content: ".";
+			color: #0676c7;
+		}
+	}
+}

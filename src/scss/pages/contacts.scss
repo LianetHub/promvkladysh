@@ -1,0 +1,154 @@
+.contacts {
+    padding: em(0) em(0) em(40) em(0);
+    @media (min-width: $md4) {
+        padding: em(0) em(0) em(60) em(0);
+    }
+    @media (min-width: $md2) {
+        padding: em(0) em(0) em(93) em(0);
+    }
+    // .contacts__container
+    &__container {
+    }
+    // .contacts__breadcrumbs
+    &__breadcrumbs {
+        margin: em(0) em(0) em(20) rem(0);
+        @media (min-width: $md2) {
+            margin: em(0) em(0) em(28) rem(0);
+        }
+    }
+    // .contacts__title
+    &__title {
+    }
+    // .contacts__body
+    &__body {
+        margin: em(24) em(0) em(0) em(0);
+        @media (min-width: $md2) {
+            display: flex;
+            margin: em(48) em(0) em(0) em(0);
+        }
+    }
+    // .contacts__list
+    &__list {
+        flex: 0 0 543px;
+        border: 1px solid #b6bbc0;
+        padding: em(10) em(4);
+        border-radius: 32px 0 0 0;
+        margin: em(0) em(0) em(24) rem(0);
+        display: flex;
+        flex-wrap: wrap;
+        @media (min-width: $md3) {
+            border-radius: 48px 0 0 0;
+            padding: em(24);
+        }
+        @media (min-width: $md2) {
+            margin: em(0) em(40) em(0) em(0);
+            padding: em(60) em(48) em(64) em(48);
+            border-radius: 64px 0px 0px 0px;
+            display: block;
+        }
+    }
+    // .contacts__item
+    &__item {
+        padding: em(12);
+        @media (min-width: $md4) {
+            flex: 0 1 50%;
+        }
+        @media (min-width: $md3) {
+            padding: 0;
+            flex: 0 1 auto;
+        }
+        &:not(:last-child) {
+            @media (min-width: $md3) {
+                margin: em(0) em(26) em(0) em(0);
+            }
+            @media (min-width: $md2) {
+                margin: em(0) em(0) em(48) rem(0);
+            }
+        }
+    }
+    // .contacts__item-header
+    &__item-header {
+        position: relative;
+        padding: em(0) em(0) em(0) em(48);
+        color: #89939e;
+        line-height: math.div(36, 16);
+        &::before,
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+        }
+        &::before {
+            font-size: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(180deg, #c2e23f 0%, rgba(194, 226, 63, 0.7) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        &::after {
+            content: "";
+            background: #232c32;
+            z-index: -1;
+        }
+        &.icon-mail {
+            &::before {
+                font-size: 16px;
+            }
+        }
+    }
+    // .contacts__item-value
+    &__item-value {
+        display: inline-block;
+        margin: em(12, 18) em(0) em(0) em(0);
+        font-family: Unbounded;
+
+        line-height: math.div(29, 18);
+        @media (min-width: $md3) {
+            font-size: 18px;
+        }
+        &[href] {
+            transition: color 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
+    &__item-caption {
+        margin: em(12) em(0) em(0) em(0);
+        font-size: 14px;
+        @media (min-width: $md3) {
+            font-size: 16px;
+        }
+        display: block;
+        color: lighten($color: $mainColor, $amount: 20);
+    }
+    &__item-text {
+        font-size: 14px;
+        @media (min-width: $md3) {
+            font-size: 16px;
+        }
+    }
+    // .contacts__map
+    &__map {
+        flex: 1 1 auto;
+        width: 100%;
+        height: 288px;
+        border-radius: 4px;
+        overflow: hidden;
+        @media (min-width: $md4) {
+            height: 400px;
+        }
+        @media (min-width: $md2) {
+            height: auto;
+        }
+    }
+}

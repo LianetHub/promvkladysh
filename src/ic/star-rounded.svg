@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 48 48"
+   fill="none"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="star-rounded.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="16.708333"
+     inkscape:cx="24.029925"
+     inkscape:cy="24.029925"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11" />
+  <path
+     style="color:#000000;fill:url(#paint0_linear_1503_10006);stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
+     d="m 24.001953,4.4355469 c -0.736928,4.35e-5 -1.474066,0.3710629 -1.816406,1.1132812 L 17.121094,16.529297 5.1132812,17.953125 C 3.49013,18.14563 2.7902042,20.298391 3.9902344,21.408203 l 8.8769536,8.208984 -2.355469,11.859375 c -0.318656,1.603819 1.512916,2.933481 2.939453,2.134766 l 10.550781,-5.90625 10.550781,5.90625 c 1.42625,0.798363 3.256044,-0.531706 2.9375,-2.134766 l -2.355468,-11.859375 8.876953,-8.208984 c 1.199986,-1.109772 0.500203,-3.262564 -1.123047,-3.455078 L 30.882812,16.529297 25.818359,5.5488281 C 25.475934,4.8066324 24.738881,4.4355034 24.001953,4.4355469 Z m 0,1.9511718 5.064453,10.9804683 c 0.289856,0.628252 0.890641,1.0666 1.580078,1.148438 l 12.007813,1.423828 -8.876953,8.208984 c -0.509803,0.471663 -0.738741,1.17906 -0.603516,1.859375 l 2.355469,11.859375 -10.550781,-5.90625 c -0.605187,-0.338585 -1.347355,-0.338911 -1.953125,0 l -10.550782,5.90625 c 0,0 -0.002,0 -0.002,0 l 2.357422,-11.859375 c 0.135138,-0.679873 -0.09335,-1.387763 -0.603515,-1.859375 L 5.3496094,19.939453 17.355469,18.515625 c 0.689342,-0.08185 1.290785,-0.517171 1.582031,-1.148438 z"
+     id="path2" />
+  <defs
+     id="defs9">
+    <linearGradient
+       id="paint0_linear_1503_10006"
+       x1="24.0012"
+       y1="5.38739"
+       x2="24.0012"
+       y2="42.8693"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#C2E23F"
+         id="stop4" />
+      <stop
+         offset="1"
+         stop-color="#C2E23F"
+         stop-opacity="0.7"
+         id="stop6" />
+    </linearGradient>
+  </defs>
+</svg>

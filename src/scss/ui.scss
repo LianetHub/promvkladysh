@@ -1,0 +1,262 @@
+//============ МОДУЛИ ====================
+@import "modules/swiper";
+// @import "../../node_modules/swiper/swiper.scss";
+
+@import "modules/fancybox";
+@import "modules/navigation";
+@import "modules/select";
+@import "modules/popup";
+//============ МОДУЛИ ====================
+
+.title {
+	font-family: Unbounded;
+
+	font-size: 30px;
+	@media (min-width: $md3) {
+		font-size: 40px;
+	}
+	@media (min-width: $md2) {
+		font-size: 56px;
+	}
+	line-height: math.div(67, 56);
+	&.title-sm {
+		font-size: 32px;
+		line-height: math.div(38, 32);
+	}
+	&.title-lg {
+		font-size: 30px;
+		line-height: math.div(39, 30);
+		@media (min-width: $md5) {
+			line-height: math.div(79, 66);
+			font-size: 36px;
+		}
+		@media (min-width: $md3) {
+			font-size: 48px;
+		}
+		@media (min-width: $md2) {
+			font-size: 66px;
+		}
+	}
+	&.title-md {
+		font-size: 32px;
+		@media (min-width: $md2) {
+			font-size: 40px;
+		}
+		line-height: math.div(48, 40);
+	}
+	&.title-xl {
+		font-size: 30px;
+		@media (min-width: $md4) {
+			font-size: 48px;
+		}
+		@media (min-width: $md2) {
+			font-size: 80px;
+		}
+		line-height: math.div(96, 80);
+	}
+}
+
+.map {
+	max-width: 100%;
+	position: relative;
+	z-index: 1;
+	&.hidden-tooltips {
+		.map-tooltip {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
+
+.fancybox__container {
+	max-width: 100%;
+}
+
+.disctict-tooltip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	z-index: 10;
+	font-size: 18px;
+	line-height: math.div(20, 16);
+	background: #ffffff;
+	padding: em(7) em(15);
+	box-shadow: 0px 12px 23px rgba(0, 0, 0, 0.08);
+	border-radius: 3.54237px;
+	text-align: center;
+	min-width: 100px;
+}
+
+.district {
+	cursor: pointer;
+	&.district-active {
+		fill: darken($color: #c2e23f, $amount: 20);
+	}
+	transition: fill 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			fill: darken($color: #c2e23f, $amount: 20);
+		}
+	}
+}
+
+.map-tooltip {
+	// transform-origin: center center;
+	pointer-events: none;
+	display: none;
+	@media (min-width: $md4) {
+		display: block;
+	}
+	transition: all 0.3s ease 0s;
+}
+
+.pc-only {
+	display: none;
+	@media (min-width: $md4) {
+		display: block;
+	}
+}
+
+.mobile-only {
+	@media (min-width: $md4) {
+		display: none;
+	}
+}
+
+[data-animate] {
+	transition: all 0.6s ease 0.05s;
+	visibility: hidden;
+	opacity: 0;
+	// &::before {
+	// 	transition: all 0.6s ease 0.05s;
+	// }
+	&.visible {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+[data-animate="main"] {
+	transform: translate(0px, 50vh);
+	&.visible {
+		transform: translate(0px, 0px);
+	}
+}
+
+[data-animate="bottom"] {
+	transform: translate(0px, 60px);
+	&.visible {
+		transform: translate(0px, 0px);
+	}
+}
+
+[data-animate="scale"] {
+	transform: scale(0);
+	& img {
+		transition: all 0.6s ease-in-out 0.1s;
+	}
+	&.visible {
+		transform: scale(1);
+	}
+}
+
+[data-animate="bounce-scale"] {
+	transform: scale(0);
+	opacity: 0;
+
+	&.visible {
+		animation: 1s ease-in-out 0.5s bounce forwards;
+	}
+}
+
+@keyframes bounce {
+	0% {
+		opacity: 0;
+		transform: scale(0) rotateY(20deg);
+	}
+	60% {
+		opacity: 1;
+		transform: scale(1.1) rotateY(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes floating {
+	0% {
+		transform: translatey(0px) rotate(9deg);
+	}
+	50% {
+		transform: translatey(-25px) rotate(-10deg);
+	}
+	100% {
+		transform: translatey(0px) rotate(5deg);
+	}
+}
+
+//============ ОБЩИЕ ЭЛЕМЕНТЫ ============
+
+// Стилизация селекта
+// $selectBg: $orange;
+// $selectColor: $mainColor;
+
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+// ::selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	-webkit-box-shadow: none;
+// 	box-shadow: none;
+// }
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+
+// Стилизация скролла
+
+$scrollbarColor: #232c32;
+$scrollbarHover: #000;
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-track {
+	background: #fff;
+}
+::-webkit-scrollbar-thumb {
+	background: $scrollbarColor;
+	border-radius: 8px;
+	@media (any-hover: hover) {
+		&:hover {
+			background: $scrollbarHover;
+		}
+	}
+}
+
+//============ ОБЩИЕ ЭЛЕМЕНТЫ ============
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
+.hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+.cover-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======

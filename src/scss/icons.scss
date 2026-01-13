@@ -1,0 +1,96 @@
+%ic {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  &:before {
+    @extend %ic;
+    display: block;
+  }
+}
+
+.icon-eye:before {
+  content: "\e90f";
+}
+.icon-star-rounded:before {
+  content: "\e90e";
+}
+.icon-lock:before {
+  content: "\e910";
+}
+.icon-cart:before {
+  content: "\e911";
+}
+.icon-verify:before {
+  content: "\e912";
+}
+.icon-star:before {
+  content: "\e90d";
+}
+.icon-arrow:before {
+  content: "\e900";
+}
+.icon-check:before {
+  content: "\e901";
+}
+.icon-close:before {
+  content: "\e902";
+}
+.icon-down:before {
+  content: "\e903";
+}
+.icon-globe:before {
+  content: "\e904";
+}
+.icon-location:before {
+  content: "\e905";
+}
+.icon-mail:before {
+  content: "\e906";
+}
+.icon-note:before {
+  content: "\e907";
+}
+.icon-phone:before {
+  content: "\e908";
+}
+.icon-play:before {
+  content: "\e909";
+}
+.icon-telegram:before {
+  content: "\e90a";
+}
+.icon-whatsapp:before {
+  content: "\e90b";
+}
+.icon-clock:before {
+  content: "\e90c";
+}
+.icon-telegram {
+  color: #37b2f7;
+  transition: color 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: darken($color: #37b2f7, $amount: 15);
+    }
+  }
+}
+
+.icon-whatsapp {
+  color: #32c91a;
+  transition: color 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: darken($color: #32c91a, $amount: 10);
+    }
+  }
+}

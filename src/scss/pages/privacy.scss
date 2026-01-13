@@ -1,0 +1,36 @@
+.privacy {
+	padding: em(0) em(0) em(88) em(0);
+	// .privacy__container
+	&__container {
+	}
+	// .privacy__body
+	&__body {
+		max-width: 908px;
+	}
+	// .privacy__title
+	&__title {
+		@media (max-width: $md5) {
+			font-size: 20px;
+		}
+	}
+	// .privacy__content
+	&__content {
+		font-size: 1rem;
+		line-height: 130%;
+		margin: em(32) em(0) em(0) em(0);
+		@media (min-width: $md5) {
+			margin: em(48) em(0) em(0) em(0);
+		}
+		& h2 {
+			font-weight: 700;
+		}
+		& > * {
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+				@media (min-width: $md5) {
+					margin-bottom: 1.5rem;
+				}
+			}
+		}
+	}
+}

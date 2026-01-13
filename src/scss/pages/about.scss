@@ -1,0 +1,250 @@
+.about {
+    padding: em(24) 0 em(30);
+    @media (min-width: $md4) {
+        padding: em(32) em(0);
+    }
+    @media (min-width: $md2) {
+        padding: em(103) em(0) em(115) em(0);
+    }
+    background: #c2e23f;
+    // .about__container
+    &__container {
+        @media (min-width: $md4) {
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+    // .about__body
+    &__body {
+        margin: em(0) em(0) em(32) rem(0);
+        @media (min-width: $md4) {
+            margin: em(0) em(35) em(0) em(0);
+        }
+        @media (min-width: $md2) {
+            margin: em(0) em(72) em(0) em(0);
+        }
+    }
+    // .about__title
+    &__title {
+        font-size: 24px;
+        line-height: math.div(32, 24);
+        @media (min-width: $md4) {
+            font-size: 30px;
+        }
+        @media (min-width: $md3) {
+            font-size: 48px;
+            line-height: math.div(57, 48);
+        }
+        @media (min-width: $md2) {
+            font-size: 51px;
+            line-height: math.div(61, 51);
+        }
+    }
+    // .about__subtitle
+    &__subtitle {
+        margin: em(16, 18) em(0) em(0) em(0);
+
+        line-height: math.div(29, 18);
+        @media (min-width: $md3) {
+            font-size: 18px;
+        }
+        @media (min-width: $md2) {
+            margin: em(40, 32) em(0) em(0) em(0);
+            font-size: 32px;
+            line-height: math.div(38, 32);
+        }
+    }
+    // .about__video
+    &__video {
+        position: relative;
+
+        width: 100%;
+        max-width: 288px;
+        margin: 0 auto;
+        @media (min-width: $md5) {
+            margin: 0;
+        }
+        @media (min-width: $md4) {
+            padding: em(10) em(0) em(0) em(0);
+            flex-shrink: 0;
+            flex-grow: 0;
+            max-width: 235px;
+        }
+        @media (min-width: $md2) {
+            max-width: 310px;
+        }
+    }
+    // .about__video-poster
+    &__video-poster {
+        & img {
+            border-radius: 64px 0 0 0;
+
+            object-position: right;
+            height: 175px;
+            @media (min-width: $md3) {
+                height: 206px;
+            }
+            @media (min-width: $md2) {
+                height: 227px;
+            }
+        }
+    }
+    // .about__video-play
+    &__video-play {
+        position: absolute;
+        right: 5px;
+        bottom: -15px;
+        width: 105px;
+        height: 105px;
+        font-size: 35px;
+        @media (min-width: $md2) {
+            font-size: 50px;
+            width: 145px;
+            height: 145px;
+        }
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 17px 31px -6px rgba(0, 0, 0, 0.21);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: em(0) em(0) em(0) em(4);
+        color: #c2e23f;
+        transition: color 0.3s ease 0s;
+        & span {
+            position: relative;
+            z-index: 2;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 7px;
+            background: linear-gradient(180deg, #2d373d 0%, #232c32 100%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: darken($color: #c2e23f, $amount: 10);
+            }
+        }
+    }
+    // .about__video-subtitle
+    &__video-subtitle {
+        margin: em(19, 24) em(0) em(0) em(0);
+        font-size: 18px;
+        @media (min-width: $md2) {
+            font-size: 24px;
+        }
+        font-weight: 500;
+        line-height: math.div(34, 24);
+    }
+}
+
+.choise {
+    padding: em(20) em(0) em(30);
+    @media (min-width: $md4) {
+        padding: em(40) em(0);
+    }
+    @media (min-width: $md2) {
+        padding: em(60) em(0);
+    }
+    // .choise__container
+    &__container {
+    }
+    // .choise__title
+    &__title {
+        @media (min-width: $md3) {
+            font-size: 48px;
+        }
+        @media (min-width: $md2) {
+            font-size: 56px;
+        }
+    }
+    // .choise__items
+    &__items {
+        margin: em(24) em(0) em(0) em(0);
+        display: grid;
+        @media (min-width: $md2) {
+            margin: em(60) em(0) em(0) em(0);
+        }
+        @media (min-width: $md4) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    // .choise__item
+    &__item {
+        border: 1px solid #b6bbc0;
+        padding: em(16);
+        @media (min-width: $md5) {
+            padding: em(24);
+        }
+        @media (min-width: $md2) {
+            padding: em(40) em(40) em(38);
+        }
+        &:first-child {
+            border-radius: 32px 0px 0px 0px;
+            @media (min-width: $md5) {
+                border-radius: 64px 0px 0px 0px;
+            }
+        }
+        @media (max-width: $md4) {
+            &:not(:nth-child(1)) {
+                border-top: 0;
+            }
+        }
+        @media (min-width: $md4) {
+            &:not(:nth-child(2n + 1), :last-child) {
+                border-left: 0;
+            }
+            &:not(:nth-child(1), :nth-child(2)) {
+                border-top: 0;
+            }
+        }
+    }
+    // .choise__item-header
+    &__item-header {
+        @media (min-width: $md5) {
+            display: flex;
+            align-items: center;
+        }
+    }
+    // .choise__item-icon
+    &__item-icon {
+        background: #c2e23f;
+        border-radius: 50%;
+        flex-shrink: 0;
+        padding: em(7);
+        width: 44px;
+        height: 44px;
+        margin: em(0) em(0) em(16) rem(0);
+        @media (min-width: $md5) {
+            margin: em(0) em(24) em(0) em(0);
+        }
+        @media (min-width: $md4) {
+            width: 56px;
+            height: 56px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    // .choise__item-caption
+    &__item-caption {
+        font-size: 24px;
+        line-height: math.div(33, 24);
+        font-weight: 500;
+        @media (min-width: $md2) {
+            line-height: math.div(38, 32);
+            font-size: 32px;
+        }
+    }
+    // .choise__item-body
+    &__item-body {
+        margin: em(16) em(0) em(0) em(0);
+        @media (min-width: $md5) {
+            margin: em(24) em(0) em(0) em(0);
+        }
+        line-height: math.div(26, 16);
+    }
+}

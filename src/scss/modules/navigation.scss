@@ -1,0 +1,43 @@
+.breadcrumbs {
+    padding: em(10, 14) em(0);
+    @media (min-width: $md4) {
+        padding: em(16, 14) em(0);
+    }
+    &__items {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 14px;
+        line-height: math.div(22, 14);
+        color: #b0b8bf;
+    }
+    // .breadcrumbs__item
+    &__item {
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+            margin: em(0) rem(12) em(0) em(0);
+            &::before {
+                margin: em(0) em(0) em(0) rem(12);
+                order: 1;
+                @extend %ic, .icon-down;
+                transform: rotate(-90deg);
+                font-size: 10px;
+            }
+        }
+    }
+    // .breadcrumbs__link
+    &__link {
+        &.active {
+            color: #64707b;
+        }
+        transition: color 0.3s ease 0s;
+        &:not(.active) {
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+}
