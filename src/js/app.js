@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     devFunctions.spollers();
     devFunctions.tooltip.geographyObserver();
     devFunctions.formSubmit();
+    devFunctions.cookies()
 
     if (typeof Fancybox !== "undefined" && Fancybox !== null) {
         Fancybox.bind("[data-fancybox]", {
