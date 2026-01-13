@@ -2504,6 +2504,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   line-height: 138.462%;
 }
 
+.cookie__text a {
+  text-decoration: underline;
+}
+
 .cookie__accept {
   margin-top: 1.125rem;
 }
@@ -9079,6 +9083,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
   .popup__close:hover {
     color: #89939e;
+  }
+
+  .cookie__text a:hover {
+    text-decoration: none;
   }
 
   .district:hover {
