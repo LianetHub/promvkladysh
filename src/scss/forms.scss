@@ -45,7 +45,9 @@
 	&__footer-btn {
 		margin: em(12) em(0) em(0) em(0);
 		@media (min-width: $md5) {
-			margin: em(0) em(0) em(0) em(32);
+			&:not(:first-child) {
+				margin: em(0) em(0) em(0) em(32);
+			}
 		}
 	}
 	// .form__footer-privacy
