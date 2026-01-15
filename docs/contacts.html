@@ -40,11 +40,11 @@
   <meta property="twitter:image:src" content="preview image" />
   <!-- Twitter -->
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260113194316" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20260113194316" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20260115204340" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20260115204340" />
 
-  <link rel="stylesheet" href="css/reset.min.css?_v=20260113194316" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20260113194316" />
+  <link rel="stylesheet" href="css/reset.min.css?_v=20260115204340" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20260115204340" />
 </head>
 
 <body data-ym-id="92253201">
@@ -211,7 +211,12 @@
               </div>
               <div class="form__footer">
                 <button type="submit" class="form__footer-btn btn btn-black btn-md">Отправить</button>
-                <div class="form__footer-privacy">Нажимая на кнопку, Вы даете согласие на обработку персональных данных</div>
+                <label class="form__footer-privacy form__privacy">
+                  <input type="checkbox" checked name="privacy" data-required class="form__privacy-input hidden" hidden>
+                  <span class="form__privacy-content">
+                    Нажимая на кнопку, Вы даете согласие на <a href="/privacy.html" class="form__privacy-link">обработку персональных данных</a>
+                  </span>
+                </label>
               </div>
             </form>
           </div>
@@ -263,10 +268,10 @@
       </div>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20260113194316"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20260113194316"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20260115204340"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20260115204340"></script>
 
-  <script src="js/app.min.js?_v=20260113194316"></script>
+  <script src="js/app.min.js?_v=20260115204340"></script>
 </body>
 
 </html>
