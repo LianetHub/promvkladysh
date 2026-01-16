@@ -18,17 +18,131 @@
 		font-size: 1rem;
 		line-height: 130%;
 		margin: em(32) em(0) em(0) em(0);
+		counter-reset: section;
 		@media (min-width: $md5) {
 			margin: em(48) em(0) em(0) em(0);
 		}
-		& h2 {
-			font-weight: 700;
+		& > div {
 		}
 		& > * {
 			&:not(:last-child) {
 				margin-bottom: 1rem;
 				@media (min-width: $md5) {
 					margin-bottom: 1.5rem;
+				}
+			}
+		}
+		& a {
+			text-decoration: underline;
+			// color: $accent;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		& h2 {
+			counter-increment: section;
+			&::before {
+				content: counter(section) ". ";
+				margin-right: 0.5rem;
+				white-space: nowrap;
+			}
+			&:not(:first-child) {
+				margin-top: 3.75rem;
+				@media (min-width: $md2) {
+					margin-top: 5rem;
+				}
+			}
+			margin-bottom: 0.75rem;
+			font-weight: 700;
+			line-height: 120%;
+			font-size: 1.125rem;
+			@media (min-width: $md5) {
+				font-size: 1.25rem;
+			}
+			& + p {
+				&:not(:first-child) {
+					margin-top: 1rem;
+					@media (min-width: $md5) {
+						margin-top: 1.5rem;
+					}
+					@media (min-width: $md2) {
+						margin-top: 1.7rem;
+					}
+				}
+			}
+		}
+		& p {
+			&:not(:first-child) {
+				margin-top: 1.2rem;
+				@media (min-width: $md5) {
+					margin-top: 1.1rem;
+				}
+				@media (min-width: $md2) {
+					margin-top: 1.2rem;
+				}
+			}
+			font-size: 0.875rem;
+			line-height: 160%;
+			@media (min-width: $md5) {
+				line-height: 120%;
+				font-size: 1rem;
+			}
+		}
+
+		& ul {
+			& li {
+				position: relative;
+				line-height: 120%;
+				font-size: 0.875rem;
+				padding-left: 1em;
+				&:not(:last-child) {
+					margin-bottom: 0.15rem;
+				}
+
+				@media (min-width: $md5) {
+					font-size: 1rem;
+				}
+				&::before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					content: "-";
+					flex-shrink: 0;
+				}
+			}
+		}
+		& ol {
+			margin-top: 0.25rem;
+			counter-reset: item;
+			& > li {
+				position: relative;
+				counter-increment: item;
+				line-height: 120%;
+				font-size: 0.875rem;
+				padding-left: 2.25em;
+				&:not(:last-child) {
+					margin-bottom: 0.15rem;
+				}
+				@media (min-width: $md5) {
+					font-size: 1rem;
+				}
+				& ol {
+					& > li {
+						padding-left: 3.25em;
+						& ol {
+							& > li {
+								padding-left: 3.75em;
+							}
+						}
+					}
+				}
+				&::before {
+					content: counter(section) "." counters(item, ".") ".";
+					position: absolute;
+					top: 0;
+					left: 0;
 				}
 			}
 		}

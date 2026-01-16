@@ -29,7 +29,8 @@
 	// .form__footer
 	&__footer {
 		margin: em(24) em(0) em(0) em(0);
-		gap: 0.5rem;
+		gap: rem(24);
+		row-gap: rem(16);
 		display: flex;
 		flex-direction: column;
 		@media (min-width: $md5) {
@@ -43,7 +44,9 @@
 	}
 	// .form__footer-btn
 	&__footer-btn {
-		margin: em(12) em(0) em(0) em(0);
+		@media (max-width: $md5) {
+			margin: em(12) em(0) em(0) em(0);
+		}
 		@media (min-width: $md5) {
 			&:not(:first-child) {
 				margin: em(0) em(0) em(0) em(32);
@@ -55,6 +58,7 @@
 		max-width: 446px;
 		font-size: 14px;
 		line-height: math.div(22, 14);
+		margin-right: auto;
 	}
 	// .form__input
 	&__input {
@@ -175,7 +179,7 @@
 		position: relative;
 		padding: em(0) em(0) em(0) rem(36);
 		font-size: 14px;
-		line-height: math.div(24, 14);
+		line-height: math.div(16, 14);
 		display: block;
 		cursor: pointer;
 		user-select: none;

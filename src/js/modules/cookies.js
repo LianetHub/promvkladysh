@@ -39,7 +39,7 @@ export const cookies = () => {
             noticeDiv.classList.add('cookie', 'cookie--hidden');
             noticeDiv.innerHTML =
                 '<div class="cookie__text">' +
-                'Мы используем файлы cookie, чтобы сайт работал&nbsp;лучше. Оставаясь с нами, вы соглашаетесь на <a href="">использование файлов cookie</a>.' +
+                'Мы используем файлы cookie, чтобы сайт работал лучше. Оставаясь с нами, вы соглашаетесь на&nbsp;<a href="/cookie-policy/" target="_blank">обработку файлов cookie</a>.' +
                 '</div>' +
                 '<button type="button" class="cookie__accept btn btn-black btn-sm">Хорошо</button>';
 
