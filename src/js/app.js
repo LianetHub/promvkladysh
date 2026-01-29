@@ -270,13 +270,13 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(maps => {
 
             const mapBlock = new maps.Map(map, {
-                center: [55.85179306886567, 49.10493149999997],
+                center: [55.836600, 49.042957],
                 zoom: 15,
                 controls: [],
             });
 
             var mark = new maps.Placemark(
-                [55.85179306886567, 49.10493149999997],
+                [55.836600, 49.042957],
                 {},
                 {
                     iconLayout: "default#image",
